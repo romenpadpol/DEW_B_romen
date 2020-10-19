@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    var h=prompt("introduce la hora ");
+    var m=prompt("introduce los minutos ");
+    var s= prompt("introduce los segundos ");
+    var resultado;
+    hms2hdec(h,m,s);
+    //funcion para pasar de hora decimal a horas minutos y segundos
+      function  hdec2hms(horaendec){
+        var minutos= ((horaendec-Math.floor(horaendec))*60/100)*100;
+        var hora = parseInt(horaendec);
+        if((minutos-Math.floor(minutos))==0){
+          var segundos=0;
+        }
+        else{
+            var segundos=((minutos-Math.floor(minutos))*60/100)*100;
+        }
+        if(hora<=9 && minutos<=9 && segundos<=9){
+          alert("0"+hora+":"+"0"+Math.round(minutos)+":"+"0"+Math.round(segundos));
+
+        }
+        else if(hora<=9 && minutos<=9){
+          alert("0"+hora+":"+"0"+Math.round(minutos)+":"+Math.round(segundos));
+        }
+        else if(minutos<=9 && segundos<=9){
+            alert(hora+":"+"0"+Math.round(minutos)+":"+"0"+Math.round(segundos));
+        }
+        else if(hora<=9 && segundos<=9){
+            alert("0"+hora+":"+Math.round(minutos)+":"+"0"+Math.round(segundos));
+        }
+        else if(hora<=9){
+          alert("0"+hora+":"+Math.round(minutos)+":"+Math.round(segundos));
+        }
+        else if(minutos<=9){
+          alert(hora+":"+"0"+Math.round(minutos)+":"+Math.round(segundos));
+        }
+        else if(segundos<=9){
+          alert(hora+":"+Math.round(minutos)+":"+"0"+Math.round(segundos));
+        }else{
+          alert(hora+":"+Math.round(minutos)+":"+Math.round(segundos));
+        }
+
+      }
+      //funcion para pasar de horas minutos y segundos, a hora decimal.
+      function   hms2hdec(h,m,s){
+        var minutos=(m/60);
+        var min=Math.round(minutos*100);
+        var minu=min/100;
+        var horas=(parseFloat(h)+parseFloat(minu));
+        alert(horas);
+      }
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

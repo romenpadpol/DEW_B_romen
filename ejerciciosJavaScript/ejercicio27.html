@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      generarArray();
+      function generarArray(elementos=20,minimo=20,maximo=100){
+      let array = new Array(elementos);
+      for(i=0; i<array.length; i++){
+        var numeroRandom = Math.random() * (maximo - minimo) + minimo;
+        array[i]=numeroRandom;
+        }
+        array.sort();
+        array = array.sort(function(){
+          return Math.random()-0.5
+        });
+      for(j=0;j<=array.length;j++){
+        console.log(array[j]);
+        }
+      }
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var x = prompt("Ingresa un numero: ");
+      var y = parseInt(x);
+      var resultado= esParOImpar(y);
+      alert("El número "+y+" es "+resultado);
+      function esParOImpar(y){
+        if(y == 0){
+          return "Este es muy fácil... ¡prueba otro!";
+        }
+        else if(y>=6){
+          return "¡¡Sólo sé contar de 0 a 6!!";
+        }
+        else if(y%2==0){
+          return "El número es par";
+        }
+        else if(y%2!=0){
+          return "El número es impar";
+        }
+        else{
+          return "No se que es";
+        }
+      }
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

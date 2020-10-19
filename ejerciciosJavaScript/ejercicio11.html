@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      let result;
+      let arg1, arg2, res1, res2;
+        while (true) {
+            arg1 = Math.random() - 0.5;
+            res1 = Math.sqrt(arg1);
+            arg2 = Math.random();
+            res2 = res1/(arg1 + arg2);
+            result = res1 + res2;
+            if(arg1<0.0){
+              console.log("no puede haber raíces cuadradas de números negativos");
+            }
+            else if((arg1+arg2)==0){
+              console.log("no puede haber divisiones por cero");
+            }
+            else{
+                console.log(result);
+                break;
+            }
+}
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

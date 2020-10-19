@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var i=3;
+      do{
+        var capital = "HELSINKI";
+        var intro = prompt("Introduce la capital en la que estoy pensando");
+        var introtoup = intro.toUpperCase();
+        if(introtoup === capital){
+          alert("has acertadoo!!");
+          i = 0;
+        }
+        else{
+          --i;
+          alert("Has fallado te quedan "+i+" intentos" );
+        }
+      }
+      while(i != 0);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

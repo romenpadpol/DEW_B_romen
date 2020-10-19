@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var esentero=false;
+      var montante= prompt("Introduce una cantidad de dinero entera:");
+      var listaBilletes=[];
+      esEntero(montante);
+    function esEntero(montante){
+      if (montante - Math.round(montante) == 0) {
+        esentero=true;
+      }
+      else {
+        esentero=false;
+        alert ("Tiene que introducir un numero entero");
+      }
+}
+    if(esentero){
+      while(montante>0){
+        if(montante>=500){
+          montante = montante-500;
+          listaBilletes.push("billete de 500");
+        }
+        else if(montante>=200){
+          montante = montante-200;
+          listaBilletes.push("billete de 200");
+        }
+        else if(montante>=100){
+          montante = montante-100;
+          listaBilletes.push("billete de 100");
+        }
+        else if(montante>=50){
+          montante = montante-50;
+          listaBilletes.push("billete de 50");
+        }
+        else if(montante>=20){
+          montante = montante-20;
+          listaBilletes.push("billete de 20");
+        }
+        else if(montante>=10){
+          montante = montante-10;
+          listaBilletes.push("billete de 10");
+        }
+        else if(montante>=5){
+          montante = montante-5;
+          listaBilletes.push("billete de 5");
+        }
+        else if(montante>=2){
+          montante = montante-2;
+          listaBilletes.push("moneda de 2");
+        }
+        else if(montante>=1){
+          montante = montante-1;
+          listaBilletes.push("moneda de 1");
+        }
+    }
+  }
+
+  for(j=0;j<=listaBilletes.length;j++){
+    console.log(listaBilletes[j]);
+  }
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

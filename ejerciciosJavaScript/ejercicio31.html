@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      let array = new Array(50);
+
+      for(i=1; i<array.length; i++){
+        var numeroRandom = Math.random() * (20 - (10)) + (10);
+        array[i]=Math.round(numeroRandom);
+        for(j=i-1; j<array.length+1; j++){
+
+          if(array[i] == array[j]){
+              repetido = true;
+          }else{
+              repetido = false;
+          }
+        }
+
+        if(repetido){
+       console.log("array[" + i + "] = " + array[i] + " --- Esta repetido");
+    } else{
+       console.log("array[" + i + "] = " + array[i] + " --- No esta repetido");
+    }
+    }
+
+
+
+    </script>
+
+
+  </head>
+  <body>
+
+  </body>
+</html>

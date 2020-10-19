@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      console.log(buscarFecha("blablablablabla blabla  23/10/1994 kfgñlksdjfsjadf"));
+      function buscarFecha(cadena) {
+        var regExp = /(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[012])\/(19|20)\d\d/;
+        var fecha = (regExp.test(cadena)) ? cadena.match(regExp)[0] : "No se encontró ninguna fecha en el texto";
+        return fecha;
+      }
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

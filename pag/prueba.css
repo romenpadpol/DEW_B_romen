@@ -1,0 +1,59 @@
+body {
+  background-image:url("fondoo.jpg");
+  backgroud-size:100%;
+  backgroud-repeat:no-repeat;
+      }
+.titulo{
+    text-align:center;
+    color:white;
+    font-family: monospace;
+    font-size: x-large;
+    text-shadow: 5px 3px 4px black;
+
+    }
+  img{
+    width:400px;
+    display:block;
+    margin:auto;
+  }
+  .imagen{
+    display:block;
+    margin:auto;
+  }
+
+  .contenidoA{
+
+    float:left;
+    margin-left:30px;
+
+    font-family: georgia;
+    color:white;
+  }
+  .queesjavas{
+    margin-left:30px;
+    margin-top:80px;
+    color:white;
+    font-family; monospace;
+
+
+  }
+  .ContenidoB{
+
+    margin-left:30px;
+
+    font-family: georgia;
+    color:white;
+  }
+
+  .historia{
+    margin-left:30px;
+    margin-top:40px;
+    color:white;
+    font-family; monospace;
+  }
+  .imagenB{
+    float:right;
+    margin-top:-600px;
+    margin-right: 20px;
+
+  }
