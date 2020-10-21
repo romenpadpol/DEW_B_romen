@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var tipo=false;
+      var temperatura=prompt("Introduce una temperatura en Farenheit");
+      var tipoo=prompt("Quiere mostrar el tipo? S para si N para no");
+      var tipooo=mostrarTipo(tipoo);
+      var temp = parseInt(temperatura);
+      if(!tipooo){
+          tipo = false;
+      }
+      else if(tipooo){
+        tipo = true;
+      }
+
+      if(tipo != false){
+        alert(temp+"  grados Farenheit son: "+deFarenheitACelcius(temp)+"ºC Celcius");
+      }
+      else{
+          alert(temp+"  grados Farenheit son: "+deFarenheitACelcius(temp)+" Celcius");
+      }
+      function deFarenheitACelcius(temp){
+        var celcius = (temp-32)*5/9;
+        return Math.round(celcius);
+      }
+      /*funcion para especificar si quiere mostrar el tipo o no en caso
+      negativo da retorna false y sino true*/
+      function mostrarTipo(tipoo)
+      {
+        return tipoo.toUpperCase() === "S";
+      }
+
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

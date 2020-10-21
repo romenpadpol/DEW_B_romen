@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var temperatura=prompt("Introduce una temperatura en Farenheit");
+      var temp = parseInt(temperatura);
+      alert(temp+"  grados Farenheit son: "+deFarenheitACelcius(temp)+" Celcius");
+      function deFarenheitACelcius(temp){
+        var celcius = (temp-32)*5/9;
+        return Math.round(celcius);
+      }
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

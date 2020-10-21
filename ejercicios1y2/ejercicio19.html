@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var nacimiento = new Date(1994,10,23);
+      var hoy = new Date;
+      var tiempoPasado= new Date() - nacimiento;
+      var unidad=prompt(" ‘d’ → días, ‘h’ → horas, ‘m’ → minutos y ‘s’ → segundos");
+      function calcularEdad(tiempoPasado,unidad){
+        var segundos = tiempoPasado/ 1000;
+        var minutos = segundos / 60;
+        tiempoPasado= tiempoPasado- (minutos - segundos);
+        var horas = minutos / 60;
+        tiempoPasado= tiempoPasado- ( horas - minutos);
+        var dias = horas / 24;
+        tiempoPasado= tiempoPasado- (dias - horas);
+        var meses = dias / 30.416666666666668;
+        tiempoPasado= tiempoPasado- (meses - dias);
+        var anos = meses / 12;
+        if(unidad=='d'){
+          console.log("Han pasado "+dias+" dias");
+        }
+        else if(unidad=='h'){
+            console.log("Han pasado "+horas+" horas");
+        }
+        else if(unidad=='m'){
+            console.log("Han pasado "+minutos+" minutos");
+        }
+        else if(unidad=='s'){
+          console.log("Han pasado "+segundos+" segundos");
+        }
+        else{
+          throw new Error("Error");
+        }
+      }
+      calcularEdad(nacimiento,unidad);
+
+
+
+
+
+
+
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

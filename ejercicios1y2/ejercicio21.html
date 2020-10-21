@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    var numero = prompt("inserta");
+
+    console.log(deGrados_aRadianes(numero));
+    console.log(deRadianes_aGrados(deGrados_aRadianes(numero)));
+    console.log(sinDeg(numero));
+    console.log(cosDeg(numero));
+    console.log(sinDegAlt(numero));
+    console.log(cosDegAlt(numero));
+      function deGrados_aRadianes (grados) {
+        return grados * (Math.PI/180);
+      }
+
+      function deRadianes_aGrados (radianes) {
+        return radianes * (180/Math.PI);
+      }
+      function sinDeg(grados){
+        return Math.sin(grados);
+      }
+      function cosDeg(grados){
+        return Math.cos(grados);
+
+      }
+      function sinDegAlt(grados){
+        return (1-cosDeg(grados*2))/2*grados;
+      }
+      function cosDegAlt(grados){
+        return (1-sinDeg(grados*2))/2*grados;
+      }
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
