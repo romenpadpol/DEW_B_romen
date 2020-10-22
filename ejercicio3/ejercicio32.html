@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var texto= prompt("introduce un texto");
+
+
+      remplazar(texto);
+      function mostrar(texto){
+        let reg= /arriba/i;
+        if(texto.match(reg)){
+          console.log("esta en el texto");
+        }
+        texto.match(reg);
+        console.log(reg);
+
+      }
+      function remplazar(texto){
+        console.log(texto.replace('arriba','abajo'));
+      }
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
