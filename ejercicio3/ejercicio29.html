@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      let array = new Array(20);
+      for(i=0; i<array.length; i++){
+        var numeroRandom = Math.random() * (100 - (-100)) + (-100);
+        array[i]=numeroRandom;
+        }
+
+      console.log(minYmax(array));
+      function minYmax(array){
+        var max= 0;
+        var min= 0;
+
+        for (var i = 0; i < array.length; i++) {
+          if (array[max] < array[i])
+           max = i;
+           if (array[min] > array[i])
+           min = i;
+
+        }
+        console.log("el valor mayor es: "+array[max]+" con indice: "+max );
+        console.log( "y el valor menor es "+array[min]+" con indice: "+ min);
+      }
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

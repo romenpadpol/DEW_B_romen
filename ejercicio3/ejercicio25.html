@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      //Función para generar un array de dimension 10 con valores aleatorios entre 100 y 200
+      generarArray();
+      function generarArray(elementos=10,minimo=100,maximo=200){
+      let array = new Array(elementos);
+      for(i=0; i<array.length; i++){
+        var numeroRandom = Math.random() * (maximo - minimo) + minimo;
+        array[i]=numeroRandom;
+        }
+      for(j=0;j<=array.length;j++){
+        console.log(array[j]);
+        }
+      }
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

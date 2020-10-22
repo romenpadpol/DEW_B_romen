@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+
+    function arrayRaizCuadrada(){
+    let array = new Array(20);
+    for(i=0; i<array.length; i++){
+      var numeroRandom = Math.random() * (100 - 60) + 60;
+      array[i]=numeroRandom;
+      }
+    var arrayMod = new Array(20);
+    for (var i = 0; i < array.length; i++) {
+        arrayMod[i] = Math.sqrt(array[i]);
+    }
+    return arrayMod;
+}
+for(j=0;j<=arrayRaizCuadrada().length;j++){
+  console.log(arrayRaizCuadrada()[j]);
+  }
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
