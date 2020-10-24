@@ -9,6 +9,7 @@
       for(i=1; i<array.length; i++){
         var numeroRandom = Math.random() * (20 - (10)) + (10);
         array[i]=Math.round(numeroRandom);
+        //bucle for para averiguar si el numero esta repetido en el array. 
         for(j=i-1; j<array.length+1; j++){
 
           if(array[i] == array[j]){
@@ -19,9 +20,9 @@
         }
 
         if(repetido){
-       console.log("array[" + i + "] = " + array[i] + " --- Esta repetido");
+       console.log("array[" + i + "] = " + array[i] + " Esta repetido");
     } else{
-       console.log("array[" + i + "] = " + array[i] + " --- No esta repetido");
+       console.log("array[" + i + "] = " + array[i] + " No esta repetido");
     }
     }
 
