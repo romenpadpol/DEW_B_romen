@@ -12,23 +12,28 @@
     console.log(cosDeg(numero));
     console.log(sinDegAlt(numero));
     console.log(cosDegAlt(numero));
+      //funcion para pasar de grados a radianes. 
       function deGrados_aRadianes (grados) {
         return grados * (Math.PI/180);
       }
-
+      //funcion para pasar de radianes a grados. 
       function deRadianes_aGrados (radianes) {
         return radianes * (180/Math.PI);
       }
+      //funcion para calcular el seno desde unos grados aportados. 
       function sinDeg(grados){
         return Math.sin(grados);
       }
+       //funcion para calcular el coseno desde unos grados aportados. 
       function cosDeg(grados){
         return Math.cos(grados);
 
       }
+      //funcion para obtener el seno del angulo en grados a partir del coseno
       function sinDegAlt(grados){
         return (1-cosDeg(grados*2))/2*grados;
       }
+      //funcion para obtener el coseno del angulo en grados a partir del seno
       function cosDegAlt(grados){
         return (1-sinDeg(grados*2))/2*grados;
       }
