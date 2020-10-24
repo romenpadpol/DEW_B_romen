@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <title></title>
     <script type="text/javascript">
+      
       let letras=["T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E"];
       var nif=prompt("Introduce solo los numeros de tu dni");
       var niff=parseInt(nif);
       alert("Te corresponde la letra: "+calcularDni(niff));
+      //función que calcula la letra del dni al introducir todos los numeros de este. 
       function calcularDni(niff){
         var resultado= niff%23;
         return letras[resultado];
