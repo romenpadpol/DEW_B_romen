@@ -7,6 +7,8 @@
       let letras=["T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E"];
       var dni=prompt("introduce tu dni sin letra");
       console.log(rangoDni(dni));
+      //funcion para calcular si un dni es correcto y dar su letra correspondiente
+   
       function rangoDni(dni){
         if(dni<=0 || dni>=99999999){
           throw new Error("Numero de dni incorrecto");
