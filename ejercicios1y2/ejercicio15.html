@@ -5,6 +5,8 @@
     <title></title>
     <script type="text/javascript">
       var lista=[];
+      //bucle for que mientras va iterando va elevando los numeros pares al cuadrado y los numeros impares al cubo
+      //, despues de esto los va introduciendo en un array llamado lista.
       for(i=1;i<=100;i++){
         if(i%2==0){
           lista.push(Math.pow(i,2));
@@ -13,6 +15,7 @@
         }
 
       }
+      //bucle for para mostrar los numeros calculados en la lista. 
       for(j=0;j<=lista.length;j++){
         console.log(lista[j]);
       }
