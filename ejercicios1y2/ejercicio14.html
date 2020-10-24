@@ -9,6 +9,7 @@
       var tipoo=prompt("Quiere mostrar el tipo? S para si N para no");
       var tipooo=mostrarTipo(tipoo);
       var temp = parseInt(temperatura);
+      //condicionales para la muestra de tipo o la no muestra del tipo. 
       if(!tipooo){
           tipo = false;
       }
@@ -22,6 +23,7 @@
       else{
           alert(temp+"  grados Farenheit son: "+deFarenheitACelcius(temp)+" Celcius");
       }
+      //funcion para el calculo de farenheit a celcius. 
       function deFarenheitACelcius(temp){
         var celcius = (temp-32)*5/9;
         return Math.round(celcius);
