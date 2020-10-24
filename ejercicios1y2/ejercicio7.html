@@ -5,14 +5,18 @@
     <title></title>
     <script type="text/javascript">
       var i=3;
+      //bucle do while para adivinar capitales, posee la capital = key.
       do{
         var capital = "HELSINKI";
         var intro = prompt("Introduce la capital en la que estoy pensando");
+        //Utilizamos upper para comparar palabras tanto en mayúsculas como en minúsculas, combiertiendo siempre en mayuscula y luego comparando. 
         var introtoup = intro.toUpperCase();
+        //condicional para la comparación. 
         if(introtoup === capital){
           alert("has acertadoo!!");
           i = 0;
         }
+        //condicional else donde vamos reduciendo el numero de intentos y vamos mostrando los sobrantes. 
         else{
           --i;
           alert("Has fallado te quedan "+i+" intentos" );
