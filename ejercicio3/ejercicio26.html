@@ -5,12 +5,14 @@
     <title></title>
     <script type="text/javascript">
       generarArray();
+      //funcion para generar un array de 20 elementos y con numeros aleatorios entre 20 y 100. 
       function generarArray(elementos=20,minimo=20,maximo=100){
       let array = new Array(elementos);
       for(i=0; i<array.length; i++){
         var numeroRandom = Math.random() * (maximo - minimo) + minimo;
         array[i]=numeroRandom;
         }
+        //función para ordenar el array. 
         array.sort();
       for(j=0;j<=array.length;j++){
         console.log(array[j]);
