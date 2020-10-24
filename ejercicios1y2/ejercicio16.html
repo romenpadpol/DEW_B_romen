@@ -8,6 +8,7 @@
       var montante= prompt("Introduce una cantidad de dinero entera:");
       var listaBilletes=[];
       esEntero(montante);
+      //función para determinar si el montante introducido es un entero o es un decimal.
     function esEntero(montante){
       if (montante - Math.round(montante) == 0) {
         esentero=true;
@@ -17,6 +18,7 @@
         alert ("Tiene que introducir un numero entero");
       }
 }
+      //En el caso de que sea un número entero empezamos a desglosar y vamos introducciendo en un array. 
     if(esentero){
       while(montante>0){
         if(montante>=500){
@@ -57,7 +59,7 @@
         }
     }
   }
-
+  //bucle for para mostar el desglose.
   for(j=0;j<=listaBilletes.length;j++){
     console.log(listaBilletes[j]);
   }
