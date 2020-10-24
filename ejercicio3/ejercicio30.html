@@ -5,11 +5,14 @@
     <title></title>
     <script type="text/javascript">
       sumaMedia(1,2,3,4,5);
+      //función para calcular la media de una cantidad de numeros. 
       function sumaMedia(obligatorio, ...parametros) {
+        //condicional para la validación de numeros.
     if (!Number.isInteger(obligatorio)) {
         throw new Error('Ingresa numeros');
     }
     sumaTotal = obligatorio;
+        //bucle for para la suma total de los datos dados.
     for (var i = 0; i < parametros.length; i++) {
         if (Number.isInteger(parametros[i])) {
             sumaTotal += parametros[i];
@@ -18,6 +21,7 @@
             console.log(parametros.splice(i,1));
         }
     }
+        //variable media para calcular la media de los datos dados. 
     mediaTotal = sumaTotal / (parametros.length + 1);
     console.log("Suma = " + sumaTotal);
     console.log("Media = " + mediaTotal.toFixed(3));
