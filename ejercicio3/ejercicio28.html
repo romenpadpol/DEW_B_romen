@@ -4,19 +4,22 @@
     <meta charset="utf-8">
     <title></title>
     <script type="text/javascript">
-
+  //función para calcular la raiz cuadrada de los numeros que estan introducidos de forma random en el array. 
     function arrayRaizCuadrada(){
     let array = new Array(20);
     for(i=0; i<array.length; i++){
       var numeroRandom = Math.random() * (100 - 60) + 60;
       array[i]=numeroRandom;
       }
+      //nuevo array que poseera los numeros previamente calculada su raiz cuadrada
     var arrayMod = new Array(20);
+      //bucle for para calcular la raiz cuadrada y sustituir en el array.
     for (var i = 0; i < array.length; i++) {
         arrayMod[i] = Math.sqrt(array[i]);
     }
     return arrayMod;
 }
+      //bucle for para mostrar el resultado. 
 for(j=0;j<=arrayRaizCuadrada().length;j++){
   console.log(arrayRaizCuadrada()[j]);
   }
