@@ -8,12 +8,15 @@
       var num2 = prompt("introduce otro numero: ");
       var num3 = prompt("introduce un ultimo numero: ");
       var total = (parseInt(num1)+parseInt(num2)+parseInt(num3));
+      //condicional para el conocimiento de que alguna o todas las variables sean negativas. 
       if(num1 < 0 || num2 < 0 || num3 < 0){
         console.error(" Al menos una de las 3 variables es negativa");
       }
+      //condicional para saber si las 3 variables son iguales a 0.
       else if(num1==0 && num2==0 && num3==0){
         console.error("Las tres variables son iguales a 0");
       }
+      //condicional para calcular si la suma de las 3 variables es mayor que 10 y si las 3 variables son diferentes. 
       else if(total>10 && num1!=num2 && num2!=num3 && num3!=num1){
         console.error("Las suma de las 3 variables es mayor que 10 Y las tres variables son diferentes");
       }
