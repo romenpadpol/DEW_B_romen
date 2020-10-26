@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var email = prompt("introduce tu de email y te diré si es valido");
+
+      validarEmail(email);
+
+      function validarEmail(email){
+        var expreregu= /[A-Za-z0-9_.-]+@[A-Za-z0-9]+\.[A-Za-z]{1,3}/gm;
+
+
+
+        if(expreregu.test(email)){
+          console.log("es un email correcto");
+        }else if(!expreregu.test(email)){
+          console.log("no es un email correcto");
+        }
+      }
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

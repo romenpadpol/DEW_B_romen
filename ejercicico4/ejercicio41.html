@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var fecha = prompt("introduce tu fecha y te diré si es valido");
+      validarFecha(fecha);
+
+      function validarFecha(fecha){
+        let expreregu=/^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/;
+        console.log(expreregu.test(fecha));
+        if(expreregu.test(fecha)){
+          console.log("es una fecha correcta");
+        }else{
+          console.log("no es una fecha correcta");
+        }
+      }
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

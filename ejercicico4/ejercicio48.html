@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var ip = prompt("Introduce una ip y la valido");
+      verificaIpDada(ip);
+
+      function verificaIpDada(ip) {
+        var Expreg = /([0-9]{1,3}\.){3}[0-9]{1,3}\:?([0-9]{1,4})?/;
+        if(Expreg.test(ip)){
+          console.log("Es una ip");
+        }else{
+          console.log("No es una ip");
+        }
+      }
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var nombre = prompt("introduce tu de twitter y te diré si es valido");
+      validarNombre(nombre);
+
+      function validarNombre(nombre){
+        let expreregu= new RegExp("^@([A-Za-z0-9_-]{1,15})");
+        console.log(expreregu.test(nombre));
+        if(expreregu.test(nombre)){
+          console.log("es un nombre correcto");
+        }else{
+          console.log("no es un nombre correcto");
+        }
+      }
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    function contarCadena(cadena) {
+      cadena = cadena.replace(/[ ]+/g," ");
+      cadena = cadena.replace(/^ /, "");
+      cadena = cadena.replace(/ $/, "");
+
+      var cadenaDividida = cadena.split(/[ ]+/g);
+      var numeroDePalabras = cadenaDividida.length;
+      console.log("tiene " + numeroDePalabras + " palabras");
+
+      cadena = "\t" + cadena;
+        return cadena;
+}
+
+console.log(contarCadena(" En un pueblo italiano  al pie de las montañas  vive nuestro amigo Marco  en una humilde morada.   "));
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

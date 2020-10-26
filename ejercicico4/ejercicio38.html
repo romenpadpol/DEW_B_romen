@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var matricula = prompt("introduce tu matricula de coche y la validaré");
+      validarMatricula(matricula);
+
+      function validarMatricula(matricula){
+        let expreregu= new RegExp("^[0-9]{4}[A-Z]{3}$");
+        console.log(expreregu.test(matricula));
+        if(expreregu.test(matricula)){
+          console.log("es una matricula correcta");
+        }else{
+          console.log("no es una matricula correcta");
+        }
+      }
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
