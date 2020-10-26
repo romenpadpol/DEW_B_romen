@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var nombre = prompt("Introduce el nombre del titular");
+      var apellido = prompt("Introduce el apellido del titular de la cuenta");
+      var saldo = parseFloat(prompt("introduce el saldo"));
+      var cuentaBancaria= new Object(nombre,apellido,saldo);
+      CuentaBancaria(nombre,apellido,saldo);
+      console.log("Se ha creado la cuenta que pertenece a: "+cuentaBancaria.nombre+" "+cuentaBancaria.apellido+" con saldo: "+cuentaBancaria.saldo);
+
+
+      function CuentaBancaria(nombre, apellido, saldo){
+
+        if(typeof(nombre) === 'string' && typeof(apellido) === 'string' && typeof(saldo) === 'number'){
+          cuentaBancaria = {
+            nombre: nombre,
+            apellido: apellido,
+            saldo: parseFloat(saldo),
+          };
+          console.log("Se acaba de crear la nueva cuenta bancaria")
+
+        }
+        return cuentaBancaria;
+
+      }
+
+
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
