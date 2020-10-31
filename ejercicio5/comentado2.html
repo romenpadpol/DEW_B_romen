@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    //Creamos la constante animal, la cual va a ser un objeto vacio. //
+
+        const animal = {};
+        //definimos una nueva propiedad sobre animal
+
+        Object.defineProperty(animal, 'isHuman', {
+
+          value: false,
+
+          enumerable: false });
+          //creamos la constante dinosaurio el cual es un objeto nuevo utilizando animal.
+          const dinosaur = Object.create(animal);
+            //definimos una nueva propiedad sobre dinosaurio
+          Object.defineProperty(dinosaur, 'isExtinct', {
+
+              value: true,
+
+              enumerable: false });
+  //creamos la constante tRex el cual es un objeto nuevo utilizando dinosaurio.
+              const tRex = Object.create(dinosaur);
+//definimos una nueva propiedad sobre tRex
+          Object.defineProperty(tRex, 'legs', {
+
+            value: 4,
+
+            enumerable: false });
+//creamos una función que crea un array de propiedades al que vamos concatenando las propiedades del
+//objeto, dentro de un bucle que acaba cuando la variable proto no muestra prototipos. returnamos
+//un array de propiedades.
+          function getAllPropertiesOf(something) {
+
+            let properties = [];
+
+            let proto = something;
+
+            while (proto !== Object.prototype) {
+
+              properties = properties.concat(Object.getOwnPropertyNames(proto));
+
+              proto = Object.getPrototypeOf(proto);     }
+
+              return properties; }
+              //mostramos todas las propiedades del objeto tRex.
+                console.log(getAllPropertiesOf(tRex));
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

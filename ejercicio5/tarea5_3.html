@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      //introducimos los datos para crear la cuenta bancaria.
+      var nombre = prompt("Introduce el nombre del titular");
+      var apellido = prompt("Introduce el apellido del titular de la cuenta");
+      var saldo = parseFloat(prompt("introduce el saldo"));
+
+      //Clase cuentabancaria la cual posee un constructor con datos.
+      class CuentaBancaria{
+        constructor(nombre,apellido,saldo){
+          this.nombre=nombre;
+          this.apellido=apellido;
+          this.saldo=saldo;
+        }
+        //Método CuentaBancaria el cual hace una validación de datos, crea la cuentabancaria
+        // y la retorna.
+        CuentaBancaria(nombre, apellido, saldo){
+
+          if(typeof(nombre) === 'string' && typeof(apellido) === 'string' && typeof(saldo) === 'number'){
+            cuentaBancaria = {
+              nombre: nombre,
+              apellido: apellido,
+              saldo: parseFloat(saldo),
+            };
+            console.log("Se acaba de crear la nueva cuenta bancaria")
+
+          }
+        return CuentaBancaria;
+
+
+        }
+
+
+      }
+      //Creación del objeto acc que deriva de la clase cuentabancaria.
+      const acc = new CuentaBancaria(nombre,apellido,saldo);
+      //llamada al método para la creación de la cuenta bancaria
+      acc.CuentaBancaria();
+      //Mostramos los datos de la cuenta bancaria creada. 
+      console.log("Se ha creado la cuenta que pertenece a: "+acc.nombre+" "+acc.apellido+" con saldo: "+acc.saldo);
+
+
+
+
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

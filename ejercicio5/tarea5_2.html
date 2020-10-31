@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      //Creamos una funcion para los viajeros
+      function Viajero(nombre,apellido1,apellido2,edad,paises,targetapuntos){
+        this.nombre = nombre;
+        this.apellido1 = apellido1;
+        this.apellido2 = apellido2;
+        this.edad = edad;
+        this.paises = paises;
+        this.targetapuntos = targetapuntos;
+      }
+      //creamos un map para introducir clientes.
+      let viajeroHash = new Map();
+      //Creamos la funcion mostrarpaises la cual busca a partir de un id de clientes
+      //los paises visitados y los muestra.
+      function MostrarPaises(){
+        var idViajero = parseInt(prompt("introduce el id del cliente a var sus paises"));
+        viajeroHash.get(idViajero).paises.forEach(pais => {
+          alert(pais);
+        });
+      }
+      //variable j la cual usamos para autoincrementar el id de los registros.
+      var j=0;
+      //Funcion crearnuevoviajero en la cual encontramos un SET para la introducción de varios paises
+      //pedimos los datos del usuario en general, creamos el objeto persona con sus datos y lo agregamos
+      // al map.
+      function CrearNuevoViajero(){
+            let paisesSet = new Set();
+            j++;
+            var nombre = prompt("introduce el nombre del pasajero");
+            var apellido1 = prompt("introduce el primer apellido del pasajero");
+            var apellido2 = prompt("introduce el segundo apellido del pasajero");
+            var edad = prompt("introduce la edad del pasajero");
+            do{
+              var paises = prompt("introduce los paises visitados, para terminar deja en blanco y dale a enter");
+              paisesSet.add(paises);
+            }while(paises.toUpperCase()!="");
+            var targeta = prompt("Si posee targeta de puntos diga si en defecto diga no");
+            var persona3 = new Viajero(nombre,apellido1,apellido2,edad,paisesSet,targeta);
+            viajeroHash.set(j, persona3);
+          }
+          //funcion para la eliminación de viajeros, se introduce el id del viajero y se elimina
+          //del map, se pueden eliminar varios a la vez hasta que se pulsa 0.
+       function EliminarViajero(){
+          while(continuar!=0){
+              var id = parseInt(prompt("introduce el id del cliente a eliminar"));
+              viajeroHash.delete(id);
+                  var continuar = prompt("para acabar pulse 0 para seguir cualquier numero");
+                    }
+                }
+              //funcion para mostrar todos los viajeros con sus datos, simplemente recorremos el
+              //map por clave valor y vamos mostrando sus datos.
+        function MostrarViajeros(){
+            viajeroHash.forEach((element,key) => alert("El cliente: "+element.nombre+" "+element.apellido1+" "+element.apellido2+" con edad: "+
+            element.edad+" posee targeta de puntos? "+element.targetapuntos+".Ha visitado: "+[...element.paises]));
+          }
+          //funcion para añadir pais una vez creado el viajero, se introduce el id de viajero y el pais
+          //y se añade a la lista del viajero. 
+        function AñadirPais(){
+            var idusuario=parseInt(prompt("introduce un usuario para añadir paises"));
+            var pais= prompt("introduce pais");
+            viajeroHash.get(idusuario).paises.add(pais);
+
+          }
+          //funcion para eliminar pais de la lista dle viajero, se introduce el id de viajero, luego el
+          // pais a eliminar y si esta dentro de la lista lo elimina.
+        function EliminarPais(){
+            var idusuario=parseInt(prompt("introduce un usuario para eliminar para eliminar paises"));
+            var pais=prompt("Introduce el nombre del pais a eliminar");
+            viajeroHash.get(idusuario).paises.delete(pais);
+          }
+//Menú para la obtencion de acciones.
+        var opcion=prompt("Menu \n"+
+        "1.Crear\n"+
+        "2.Eliminar\n"+
+        "3.Mostrarviajeros\n"+
+        "4.Eliminarpais\n"+
+        "5.Agregarpais\n"+
+        "6.Mostrarpaises\n");
+//bucle while para no ejecutar cada vez que se quiera registrar o hacer alguna acción.
+        while(opcion!=""){
+          switch (opcion) {
+            case '1':
+              CrearNuevoViajero();
+              opcion=prompt("Menu \n"+
+             "1.Crear\n"+
+             "2.Eliminar\n"+
+             "3.Mostrarviajeros\n"+
+             "4.Eliminarpais\n"+
+             "5.Agregarpais\n"+
+             "6.Mostrarpaises\n");
+              break;
+            case '2':
+              EliminarViajero();
+              opcion=prompt("Menu \n"+
+             "1.Crear\n"+
+             "2.Eliminar\n"+
+             "3.Mostrarviajeros\n"+
+             "4.Eliminarpais\n"+
+             "5.Agregarpais\n"+
+             "6.Mostrarpaises\n");
+              break;
+            case '3':
+              MostrarViajeros();
+              opcion=prompt("Menu \n"+
+             "1.Crear\n"+
+             "2.Eliminar\n"+
+             "3.Mostrarviajeros\n"+
+             "4.Eliminarpais\n"+
+             "5.Agregarpais\n"+
+             "6.Mostrarpaises\n");
+              break;
+            case '4':
+              EliminarPais();
+              opcion=prompt("Menu \n"+
+             "1.Crear\n"+
+             "2.Eliminar\n"+
+             "3.Mostrarviajeros\n"+
+             "4.Eliminarpais\n"+
+             "5.Agregarpais\n"+
+             "6.Mostrarpaises\n");
+              break;
+            case '5':
+              AñadirPais();
+              opcion=prompt("Menu \n"+
+             "1.Crear\n"+
+             "2.Eliminar\n"+
+             "3.Mostrarviajeros\n"+
+             "4.Eliminarpais\n"+
+             "5.Agregarpais\n"+
+             "6.Mostrarpaises\n");
+              break;
+            case '6':
+              MostrarPaises();
+              opcion=prompt("Menu \n"+
+              "1.Crear\n"+
+              "2.Eliminar\n"+
+              "3.Mostrarviajeros\n"+
+              "4.Eliminarpais\n"+
+              "5.Agregarpais\n"+
+              "6.Mostrarpaises\n");
+              break;
+            default:
+              opcion="";
+              alert('adios');
+
+
+          }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

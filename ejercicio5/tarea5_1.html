@@ -4,14 +4,19 @@
     <meta charset="utf-8">
     <title></title>
     <script type="text/javascript">
+    //introducimos los datos para crear la cuenta bancaria.
       var nombre = prompt("Introduce el nombre del titular");
       var apellido = prompt("Introduce el apellido del titular de la cuenta");
       var saldo = parseFloat(prompt("introduce el saldo"));
+      //Creamos la cuenta bancaria como objeto
       var cuentaBancaria= new Object(nombre,apellido,saldo);
+      //llamamos al método cuentabancaria y le pasamos los valores.
       CuentaBancaria(nombre,apellido,saldo);
+      //mostramos los datos de la cuenta bancaria por consola.
       console.log("Se ha creado la cuenta que pertenece a: "+cuentaBancaria.nombre+" "+cuentaBancaria.apellido+" con saldo: "+cuentaBancaria.saldo);
 
-
+      //Cremos el método CuentaBancaria el cual hace una validación de datos, crea la cuentabancaria
+      // y la retorna. 
       function CuentaBancaria(nombre, apellido, saldo){
 
         if(typeof(nombre) === 'string' && typeof(apellido) === 'string' && typeof(saldo) === 'number'){

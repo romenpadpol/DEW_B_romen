@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      //Creamos una constante tropicalBasket, en la que tenemos un array con 3 bananas,
+      //0 papayas, 7 oranges y 4 watermelons.
+      const tropicalBasket = {
+        bananas: 3,
+        papayas: 0,
+        oranges: 7,
+        watermelons: 4
+};
+    //Creamos la constante smallBasket la cual posee los atributos strawberries = 8 y grapes
+    //=12
+      const smallBasket = {
+        strawberries: 8,
+        grapes: 12 };
+    //Creamos la función getFruitsDescription la cual posee una constante fruitsListed
+    //que nos aporta una lista, luego tenemos fruitsAvailable la cual nos aporta una lista
+    //con la condicion de que solo salen frutas que tenemos en cantidad mayor a 0.
+      const getFruitsDescription = (basket) => {
+        const fruitsListed = Object.keys(basket);
+        const fruitsAvailable = fruitsListed.filter((fruit) => {return basket[fruit] > 0;
+    });
+    //devuelve la lista de frutas disponibles separadas por una coma.
+    return 'This basket has: ' + fruitsAvailable.join(', ');
+
+};
+//devuelve la descripción de la clase tropicalBasket y la de smallBasket.
+console.log(getFruitsDescription(tropicalBasket)); console.log(getFruitsDescription(smallBasket));
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
