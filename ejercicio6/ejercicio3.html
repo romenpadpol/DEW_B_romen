@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var datos;
+      function estado(){
+          datos= window.open("","Estado","width=200, height=200");
+        if(navigator.onLine) {
+              datos.document.write("Estas conectado a internet");
+              datos.document.write("<br>");
+              datos.document.write("el nombre del navegador es "+navigator.appName);
+              datos.document.write("<br>");
+              datos.document.write("Y la version: "+navigator.appVersion);
+        } else {
+              datos.document.write("no estas conectado a internet");
+              datos.document.write("<br>");
+              datos.document.write("el nombre del navegador es "+navigator.appName);
+              datos.document.write("<br>");
+              datos.document.write("Y la version: "+navigator.appVersion);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <button type="button" onclick="estado()" name="button">estado</button>
+  </body>
+</html>

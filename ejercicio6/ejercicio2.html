@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      function anterior() {
+        history.back();
+      }
+
+      function siguiente() {
+        history.forward();
+      }
+      function historial(){
+        var identificador = prompt("hay: "+history.length+" selecciona el identificador para moverte entre ventanas");
+        history.go(identificador);
+      }
+
+    </script>
+  </head>
+  <body>
+    <button type="button" onclick="anterior()" name="button">anterior</button>
+    <button type="button" onclick="siguiente()" name="button">siguiente</button>
+    <button type="button" onclick="historial()" name="button">historial</button>
+  </body>
+</html>

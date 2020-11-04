@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var datos;
+      function crearVentana(){
+        datos= window.open("","hola","width=200, height=200");
+        datos.document.write("Nombre de la ventana:"+datos.window.name);
+        datos.document.write("<br>");
+        datos.document.write("Ancho externo: "+datos.screen.width);
+        datos.document.write("<br>");
+        datos.document.write("Ancho interno: "+datos.screen.availWidth);
+        datos.document.write("<br>");
+        datos.document.write("Alto externo: "+datos.screen.height);
+        datos.document.write("<br>");
+        datos.document.write("Alto interno: "+datos.screen.availHeight);
+        datos.document.write("<br>");
+        datos.document.write(" Scroll H: "+datos.window.scrollX);
+        datos.document.write("<br>");
+        datos.document.write("Scroll V: "+datos.window.scrollY);
+        datos.document.write("<br>");
+        datos.document.write(" Distancia desde la izquierda = "+datos.window.screenX);
+        datos.document.write("<br>");
+        datos.document.write("Distancia desde arriba ="+datos.window.screenY);
+        datos.document.write("<br>");
+
+      }
+      function quitarVentana(){
+        datos.close();
+      }
+    </script>
+  </head>
+  <body>
+    <button type="button" onclick="crearVentana()" name="button">Boton1</button>
+    <button type="button" onclick="quitarVentana()" name="button">Boton2</button>
+  </body>
+</html>

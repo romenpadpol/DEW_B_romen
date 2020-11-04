@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var ventana;
+      function AbrirVentana(){
+        var left=(screen.width/2)-(400/2);
+	      var top=(screen.height/2)-(400/2);
+        ventana=window.open("","","width=400, height=400"+",top="+top+",left="+left);
+      }
+      function CerrarVentana(){
+        try {
+          if(!ventana) {
+              throw Error("No hay ventana que cerrar");
+          }else if (!ventana.closed) {
+              ventana.close();
+          }else {
+              throw Error("No hay ventana que cerrar");
+          }
+      } catch (e) {
+          alert(e);
+      }
+      }
+      function Ampliar(){
+        var anchoVentana = ventana.innerWidth + 30;
+        try {
+        if (anchoVentana < screen.width) {
+          ventana.resizeBy(30, 30);
+          ventana.focus();
+          } else {
+            throw Error("No hay ventana para ampliar");
+        }
+          } catch (error) {
+            alert(error);
+        }
+        }
+        function Reducir(){
+
+          try {
+
+            if (!ventana) {
+           throw Error("No hay ventana que ampliar");
+         } else if (ventana.closed) {
+           throw Error("No hay ventana que ampliar");
+         }
+         var anchoVentana = ventana.innerWidth - 30;
+         if(ventana.innerWidth<150){
+
+          throw Error("No se puede reducir más");
+          }
+          else if (anchoVentana < screen.width) {
+             ventana.resizeBy(-30, -30);
+             ventana.focus();
+
+            } else {
+              throw Error("No hay ventana para reducir");
+
+            }
+            } catch (error) {
+              alert(error);
+          }
+        }
+        function Mover(){
+          try {
+            if (!ventana) {
+            throw Error("No hay ventana que mover");
+          } else if (ventana.closed) {
+            throw Error("No hay ventana que mover");
+          }
+            var x = parseInt(prompt("introduzca el tamaño horizontal"));
+            var y = parseInt(prompt("introduzca el tamaño vertical"));
+            if(isNaN(x,y) || !Number.isInteger(x, y) || x <= 0 && y <= 0){
+              throw Error("no ha introducido numeros o no va a exitir modificación");
+            }else{
+              if (x < screen.width || y < screen.height) {
+                ventana.moveTo(x, y);
+                ventana.focus();
+              } else {
+                  throw Error("No se pudo mover la ventana actual");
+              }
+
+            }
+
+            } catch (error) {
+              alert(error);
+          }
+
+
+        }
+
+    </script>
+  </head>
+  <body>
+    <button type="button" onclick="AbrirVentana()" name="button">Abrir ventana</button>
+    <button type="button" onclick="CerrarVentana()" name="button">Cerrar ventana</button>
+    <button type="button" onclick="Ampliar()" name="button">Ampliar</button>
+    <button type="button" onclick="Reducir()" name="button">Reducir</button>
+    <button type="button" onclick="Mover()" name="button">Mover</button>
+  </body>
+</html>
