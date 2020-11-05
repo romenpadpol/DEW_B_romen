@@ -4,13 +4,15 @@
     <meta charset="utf-8">
     <title></title>
     <script type="text/javascript">
+      //Método anterior el cual nos sirve para regresar a la ventana anterior si existe.
       function anterior() {
         history.back();
       }
-
+      //Método siguiente nos sirve para volver a la ventana desde la que hemos vuelto hacia atras.
       function siguiente() {
         history.forward();
       }
+      //Método historial el cual nos muestra el numero de páginas que se han ido recorriendo. 
       function historial(){
         var identificador = prompt("hay: "+history.length+" selecciona el identificador para moverte entre ventanas");
         history.go(identificador);
