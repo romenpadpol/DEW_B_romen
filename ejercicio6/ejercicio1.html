@@ -5,8 +5,11 @@
     <title></title>
     <script type="text/javascript">
       var datos;
+      //función para crear ventana de tamaño de ancho 200 y altura 200 la cual se creará con algunos datos que mostraremos. 
       function crearVentana(){
+        //Variable datos la cual posee la ventana emergente. 
         datos= window.open("","hola","width=200, height=200");
+        //Método write el cual nos sirve para introducir los nuevos datos en la ventan emergente. 
         datos.document.write("Nombre de la ventana:"+datos.window.name);
         datos.document.write("<br>");
         datos.document.write("Ancho externo: "+datos.screen.width);
@@ -27,7 +30,9 @@
         datos.document.write("<br>");
 
       }
+      //función para cerrar la ventana emergente que hemos abierto. 
       function quitarVentana(){
+        //Método close el cual nos sirve para cerrar la ventana emergente. 
         datos.close();
       }
     </script>
