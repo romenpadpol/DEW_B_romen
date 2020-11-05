@@ -4,9 +4,13 @@
     <meta charset="utf-8">
     <title></title>
     <script type="text/javascript">
+      //Variable datos la cual utilizaremos para abrir nuestra ventana emergente y añadir datos para mostrar.
       var datos;
+      //Método para mostrar si estas conectado a internet o no y el nombre y la version del navegador.
       function estado(){
+          //Método para abrir la ventana con un ancho de 200 y un alto de 200
           datos= window.open("","Estado","width=200, height=200");
+         //Condicional para saber si el navegador posee internet o no, ademas de mostrar la versión del navegador y el nombre de este.
         if(navigator.onLine) {
               datos.document.write("Estas conectado a internet");
               datos.document.write("<br>");
