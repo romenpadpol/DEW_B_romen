@@ -4,12 +4,16 @@
     <meta charset="utf-8">
     <title></title>
     <script type="text/javascript">
+	//variable ventana la cual utilizaremos más adelante 
       var ventana;
+	    //función para abrir una ventana centrada.
       function AbrirVentana(){
+	//variables para el centrado de la ventana que hemos creado. 
         var left=(screen.width/2)-(400/2);
-	      var top=(screen.height/2)-(400/2);
+	var top=(screen.height/2)-(400/2);
         ventana=window.open("","","width=400, height=400"+",top="+top+",left="+left);
       }
+	//función para cerrar la ventana que hemos creado anteriormente, en caso de estar cerrada mostrará errores. 
       function CerrarVentana(){
         try {
           if(!ventana) {
@@ -23,10 +27,13 @@
           alert(e);
       }
       }
+	    //función para ampliar la ventana, se ampliará 30px cada vez que pulsemos el boton ampliar, en caso de errores los mostrará. 
       function Ampliar(){
+	      //variable anchoVentana la cual posee el ancho actual mas 30.
         var anchoVentana = ventana.innerWidth + 30;
         try {
         if (anchoVentana < screen.width) {
+	//método para redimensionar la ventana.
           ventana.resizeBy(30, 30);
           ventana.focus();
           } else {
@@ -36,32 +43,30 @@
             alert(error);
         }
         }
+	    //fnción para reducir la ventana, en el caso de que no se pueda reducir más mostrará error y en el caso de que no exista ninguna ventana que reducir. 
         function Reducir(){
 
           try {
-
-            if (!ventana) {
+           if (!ventana) {
            throw Error("No hay ventana que ampliar");
          } else if (ventana.closed) {
            throw Error("No hay ventana que ampliar");
          }
          var anchoVentana = ventana.innerWidth - 30;
          if(ventana.innerWidth<150){
-
           throw Error("No se puede reducir más");
           }
-          else if (anchoVentana < screen.width) {
+         else if (anchoVentana < screen.width) {
              ventana.resizeBy(-30, -30);
              ventana.focus();
-
             } else {
               throw Error("No hay ventana para reducir");
-
             }
             } catch (error) {
               alert(error);
           }
         }
+	    //Función para mover la ventana de sitio segun los datos que introduzca el usuario. Si son datos que no puedan contemplarse mostrará un error. 
         function Mover(){
           try {
             if (!ventana) {
@@ -69,8 +74,10 @@
           } else if (ventana.closed) {
             throw Error("No hay ventana que mover");
           }
+		  //variables para introducir las nuevas coordenadas de la ventana. 
             var x = parseInt(prompt("introduzca el tamaño horizontal"));
             var y = parseInt(prompt("introduzca el tamaño vertical"));
+		  //condicional para la introducción de las coordenadas. 
             if(isNaN(x,y) || !Number.isInteger(x, y) || x <= 0 && y <= 0){
               throw Error("no ha introducido numeros o no va a exitir modificación");
             }else{
