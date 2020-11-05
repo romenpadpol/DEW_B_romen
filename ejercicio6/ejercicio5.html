@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <title></title>
     <script type="text/javascript">
+      //función para mostrar el tamaño de la barra de tareas a partir del calculo entre la altura y la altura disponible.
       function BarraDeTareas(){
+        //varible total la cual posee la diferencia entre el tamaño total y el tamaño disponible que es la relación que nos da el tamaño de la barra de tareas.
         var total = screen.height-screen.availHeight;
-
+        //varible datos la cual es la que nos muestra una ventana emergente con el tamaño de la barra de tareas. 
         var datos=window.open("","","width=200, height=200");
         datos.document.write("Tamaño de la barra de tareas = "+total+"px");
       }
